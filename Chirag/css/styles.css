@@ -4336,3 +4336,1041 @@ img.u-pull-left {
         right: 6vw;
     }
 }
+
+/* ===================================================================
+ * # NEW INTRO / HERO
+ * ------------------------------------------------------------------- */
+
+.s-intro {
+    position: relative;
+}
+
+.intro-content {
+    min-height: calc(100vh - var(--header-height));
+    padding-top: calc(var(--header-height) + 6rem);
+    padding-bottom: 8rem;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(320px, .8fr);
+    align-items: center;
+    gap: 6rem;
+}
+
+/* -------------------------------------------------------------------
+ * ## Main intro
+ * ------------------------------------------------------------------- */
+
+.intro-main {
+    position: relative;
+    z-index: 2;
+}
+
+.intro-main .text-pretitle {
+    margin-bottom: 2rem;
+}
+
+.intro-main .text-huge-title {
+    max-width: 850px;
+    margin-bottom: 2.5rem;
+}
+
+.intro-highlight {
+    color: var(--color-1);
+}
+
+/* -------------------------------------------------------------------
+ * ## Description
+ * ------------------------------------------------------------------- */
+
+.intro-description {
+    max-width: 680px;
+    margin-bottom: 2rem;
+
+    font-size: 1.9rem;
+    line-height: 1.65;
+    color: var(--color-text);
+}
+
+.intro-stack {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .7rem;
+
+    margin-bottom: 3rem;
+
+    font-size: 1.4rem;
+    letter-spacing: .02em;
+}
+
+.intro-stack span {
+    opacity: .45;
+}
+
+.intro-stack strong {
+    font-weight: 500;
+}
+
+/* -------------------------------------------------------------------
+ * ## Buttons
+ * ------------------------------------------------------------------- */
+
+.intro-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    margin-bottom: 3.5rem;
+}
+
+.intro-buttons .btn {
+    margin: 0;
+}
+
+.intro-buttons .btn--stroke {
+    border: 1px solid var(--color-border);
+}
+
+/* -------------------------------------------------------------------
+ * ## Experience
+ * ------------------------------------------------------------------- */
+
+.intro-experience {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.intro-experience-item {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+}
+
+.intro-experience-item strong {
+    font-size: 2.8rem;
+    line-height: 1;
+    color: var(--color-1);
+}
+
+.intro-experience-item span {
+    font-size: 1.3rem;
+    opacity: .7;
+}
+
+.intro-experience-divider {
+    width: 1px;
+    height: 35px;
+    background: var(--color-border);
+}
+
+
+/* -------------------------------------------------------------------
+ * ## Visual card
+ * ------------------------------------------------------------------- */
+
+.intro-visual {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 2;
+}
+
+.intro-card {
+    width: min(100%, 390px);
+    padding: 2.5rem;
+
+    border: 1px solid var(--color-border);
+    background: rgba(255, 255, 255, .025);
+
+    box-shadow: 0 25px 70px rgba(0, 0, 0, .25);
+
+    position: relative;
+}
+
+.intro-card-top {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+
+    margin-bottom: 2.5rem;
+
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: .12em;
+    opacity: .7;
+}
+
+.intro-status-dot {
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+    background: #55c878;
+
+    box-shadow: 0 0 0 5px rgba(85, 200, 120, .08);
+}
+
+.intro-avatar {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+
+    overflow: hidden;
+    margin-bottom: 2rem;
+
+    background: var(--color-bg);
+}
+
+.intro-avatar img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    display: block;
+
+    transition: transform .5s ease;
+}
+
+.intro-card:hover .intro-avatar img {
+    transform: scale(1.03);
+}
+
+.intro-card h2 {
+    margin-bottom: .5rem;
+    font-size: 2.2rem;
+}
+
+.intro-card > p {
+    margin-bottom: 2rem;
+    font-size: 1.4rem;
+    opacity: .65;
+}
+
+.intro-card-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .7rem;
+}
+
+.intro-card-skills span {
+    padding: .6rem .9rem;
+
+    border: 1px solid var(--color-border);
+
+    font-size: 1.1rem;
+    line-height: 1;
+}
+
+
+/* -------------------------------------------------------------------
+ * ## Social links
+ * ------------------------------------------------------------------- */
+
+.s-intro .intro-social {
+    z-index: 3;
+}
+
+
+/* ===================================================================
+ * # RESPONSIVE
+ * =================================================================== */
+
+@media screen and (max-width: 1000px) {
+
+    .intro-content {
+        grid-template-columns: 1fr;
+        gap: 5rem;
+
+        min-height: auto;
+        padding-top: calc(var(--header-height) + 7rem);
+    }
+
+    .intro-main {
+        max-width: 850px;
+    }
+
+    .intro-visual {
+        justify-content: flex-start;
+    }
+
+    .intro-card {
+        width: min(100%, 420px);
+    }
+
+}
+
+
+@media screen and (max-width: 800px) {
+
+    .intro-content {
+        padding-top: calc(var(--header-height) + 5rem);
+        padding-bottom: 7rem;
+    }
+
+    .intro-description {
+        font-size: 1.7rem;
+    }
+
+    .intro-stack {
+        font-size: 1.25rem;
+    }
+
+    .intro-experience-item {
+        display: block;
+    }
+
+    .intro-experience-item strong {
+        display: block;
+        margin-bottom: .5rem;
+    }
+
+}
+
+
+@media screen and (max-width: 600px) {
+
+    .intro-content {
+        padding-top: calc(var(--header-height) + 4rem);
+        padding-bottom: 6rem;
+
+        gap: 4rem;
+    }
+
+    .intro-main .text-huge-title {
+        padding-right: 0;
+    }
+
+    .intro-description {
+        font-size: 1.6rem;
+        line-height: 1.6;
+    }
+
+    .intro-stack {
+        line-height: 1.8;
+    }
+
+    .intro-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .intro-buttons .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .intro-experience {
+        gap: 1.5rem;
+    }
+
+    .intro-experience-item strong {
+        font-size: 2.3rem;
+    }
+
+    .intro-experience-item span {
+        font-size: 1.1rem;
+    }
+
+    .intro-card {
+        padding: 2rem;
+    }
+
+    .intro-card h2 {
+        font-size: 2rem;
+    }
+
+}
+/* ===================================================================
+ * # MODERN ABOUT SECTION
+ *
+ * ------------------------------------------------------------------- */
+
+.about-modern-content {
+    padding-top: var(--vspace-2);
+    padding-right: 5vw;
+    margin-left: -2rem;
+}
+
+.about-profile-wrap {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 560px;
+}
+
+.about-profile-wrap::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    pointer-events: none;
+}
+
+.about-profile-wrap .about-info__pic {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.about-profile-wrap:hover .about-info__pic {
+    transform: scale(1.02);
+}
+
+
+/* --------------------------------------------------------------------
+ * ## about title
+ * -------------------------------------------------------------------- */
+
+.about-title {
+    max-width: 650px;
+    margin-top: var(--vspace-1);
+    margin-bottom: var(--vspace-1);
+    font-size: clamp(2.8rem, 4vw, 5rem);
+    line-height: 1.08;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    color: var(--color-text-dark);
+}
+
+.about-title span {
+    color: var(--color-1);
+}
+
+
+/* --------------------------------------------------------------------
+ * ## about description
+ * -------------------------------------------------------------------- */
+
+.about-modern-content .attention-getter {
+    max-width: 650px;
+    margin-bottom: var(--vspace-1);
+}
+
+.about-description {
+    max-width: 650px;
+    font-size: var(--text-md);
+    line-height: 1.7;
+    color: var(--color-text-dark);
+    margin-bottom: var(--vspace-1_5);
+}
+
+
+/* --------------------------------------------------------------------
+ * ## about highlights
+ * -------------------------------------------------------------------- */
+
+.about-highlights {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+    margin-top: var(--vspace-1_5);
+    margin-bottom: var(--vspace-1_5);
+    max-width: 650px;
+}
+
+.about-highlight {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.2rem;
+    padding: 1.4rem 1.5rem;
+    border: 1px solid var(--color-border);
+    background: rgba(255, 255, 255, 0.015);
+    transition: all 0.3s ease;
+}
+
+.about-highlight:hover {
+    border-color: var(--color-1);
+    transform: translateX(4px);
+}
+
+.about-highlight__icon {
+    min-width: 34px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-1);
+    letter-spacing: 0.08em;
+}
+
+.about-highlight strong {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--color-text-dark);
+}
+
+.about-highlight p {
+    margin: 0;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    color: var(--color-text);
+}
+
+
+/* --------------------------------------------------------------------
+ * ## CV button
+ * -------------------------------------------------------------------- */
+
+.about-cv-btn {
+    width: 100%;
+    max-width: 650px;
+    margin-top: 0.5rem;
+    text-align: center;
+}
+
+
+/* --------------------------------------------------------------------
+ * ## expertise
+ * -------------------------------------------------------------------- */
+
+.s-about .about-expertise {
+    padding-top: calc(7 * var(--space));
+}
+
+.s-about .about-expertise .text-pretitle {
+    margin-bottom: var(--vspace-1);
+}
+
+.s-about .about-expertise .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem 1.2rem;
+    margin-top: var(--vspace-1);
+}
+
+.s-about .about-expertise .skills-list li {
+    margin: 0;
+    padding: 0.7rem 1.1rem;
+    border: 1px solid var(--color-border);
+    font-size: 1.35rem;
+    line-height: 1.3;
+    transition: all 0.3s ease;
+}
+
+.s-about .about-expertise .skills-list li::after {
+    display: none;
+}
+
+.s-about .about-expertise .skills-list li:hover {
+    color: var(--color-1);
+    border-color: var(--color-1);
+}
+
+
+/* --------------------------------------------------------------------
+ * ## responsive
+ * -------------------------------------------------------------------- */
+
+@media screen and (max-width: 1000px) {
+
+    .about-modern-content {
+        padding-right: 0;
+        margin-left: 0;
+        padding-top: var(--vspace-2);
+    }
+
+    .about-title {
+        max-width: 100%;
+    }
+
+    .about-description,
+    .about-modern-content .attention-getter {
+        max-width: 100%;
+    }
+
+    .about-cv-btn {
+        max-width: 100%;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .about-profile-wrap {
+        max-width: 100%;
+    }
+
+    .about-modern-content {
+        padding: var(--vspace-2) 0 0;
+    }
+
+    .about-title {
+        font-size: 3.2rem;
+    }
+
+    .about-highlights {
+        max-width: 100%;
+    }
+
+    .s-about .about-expertise .skills-list {
+        gap: 0.7rem;
+    }
+
+    .s-about .about-expertise .skills-list li {
+        font-size: 1.2rem;
+        padding: 0.6rem 0.9rem;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+
+    .about-title {
+        font-size: 2.8rem;
+        line-height: 1.15;
+    }
+
+    .about-highlight {
+        padding: 1.2rem;
+    }
+
+    .about-highlight strong {
+        font-size: 1.35rem;
+    }
+
+    .about-highlight p {
+        font-size: 1.15rem;
+    }
+
+    .about-modern-content .attention-getter {
+        font-size: 1.5rem;
+        line-height: 1.65;
+    }
+
+    .about-description {
+        font-size: 1.4rem;
+    }
+}
+/* ===================================================================
+ * # MODERN ABOUT SECTION
+ * ------------------------------------------------------------------- */
+
+
+/* --------------------------------------------------------------------
+ * ## Main About Layout
+ * ------------------------------------------------------------------- */
+
+.s-about .about-info {
+    align-items: flex-start;
+}
+
+.about-modern-content {
+    padding-right: 5rem;
+}
+
+.about-modern-content .text-pretitle,
+.about-expertise-modern .text-pretitle {
+    margin-bottom: 3rem;
+}
+
+
+/* --------------------------------------------------------------------
+ * ## About Title
+ * ------------------------------------------------------------------- */
+
+.about-title {
+    max-width: 650px;
+
+    margin-top: 0;
+    margin-bottom: 3rem;
+
+    font-size: clamp(3.2rem, 4vw, 5rem);
+    line-height: 1.08;
+
+    font-weight: 500;
+    letter-spacing: -0.02em;
+
+    color: var(--color-text-dark);
+}
+
+.about-title span {
+    color: var(--color-1);
+}
+
+
+/* --------------------------------------------------------------------
+ * ## About Text
+ * ------------------------------------------------------------------- */
+
+.about-modern-content .attention-getter {
+    max-width: 650px;
+
+    margin-bottom: 2.5rem;
+
+    font-size: 1.8rem;
+    line-height: 1.65;
+}
+
+.about-description {
+    max-width: 650px;
+
+    margin-bottom: 3.5rem;
+
+    font-size: 1.55rem;
+    line-height: 1.7;
+
+    color: var(--color-text);
+}
+
+
+/* --------------------------------------------------------------------
+ * ## About Stats
+ * ------------------------------------------------------------------- */
+
+.about-stats {
+    display: flex;
+    align-items: center;
+
+    max-width: 650px;
+
+    margin-bottom: 4rem;
+}
+
+.about-stat {
+    flex: 1;
+
+    padding: 0 2.5rem;
+
+    border-right: 1px solid var(--color-border);
+}
+
+.about-stat:first-child {
+    padding-left: 0;
+}
+
+.about-stat:last-child {
+    border-right: none;
+}
+
+.about-stat strong {
+    display: block;
+
+    margin-bottom: 0.5rem;
+
+    font-family: var(--font-2);
+    font-size: 4.5rem;
+    line-height: 1;
+
+    font-weight: 500;
+
+    color: var(--color-1);
+}
+
+.about-stat span {
+    display: block;
+
+    font-size: 1.25rem;
+    line-height: 1.4;
+
+    color: var(--color-text);
+}
+
+
+/* --------------------------------------------------------------------
+ * ## CV Button
+ * ------------------------------------------------------------------- */
+
+.about-cv-btn {
+    width: 100%;
+    max-width: 430px;
+
+    margin-top: 0;
+
+    text-align: center;
+}
+
+
+/* --------------------------------------------------------------------
+ * ## Expertise
+ * ------------------------------------------------------------------- */
+
+.about-expertise-modern {
+    padding-left: 1rem;
+}
+
+.expertise-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 1.5rem;
+
+    margin-bottom: 1.5rem;
+}
+
+
+/* --------------------------------------------------------------------
+ * ## Expertise Cards
+ * ------------------------------------------------------------------- */
+
+.expertise-card {
+    position: relative;
+
+    min-height: 210px;
+
+    padding: 2.5rem;
+
+    border: 1px solid var(--color-border);
+
+    background: rgba(255, 255, 255, 0.015);
+
+    transition:
+            border-color 0.3s ease,
+            transform 0.3s ease,
+            background 0.3s ease;
+}
+
+.expertise-card:hover {
+    border-color: var(--color-1);
+
+    background: rgba(255, 255, 255, 0.025);
+
+    transform: translateY(-4px);
+}
+
+
+/* Number */
+
+.expertise-number {
+    margin-bottom: 1.5rem;
+
+    font-size: 1.1rem;
+    font-weight: 600;
+
+    letter-spacing: 0.12em;
+
+    color: var(--color-1);
+}
+
+
+/* Card Title */
+
+.expertise-card h4 {
+    margin-bottom: 1rem;
+
+    font-size: 1.7rem;
+    line-height: 1.3;
+
+    font-weight: 500;
+
+    color: var(--color-text-dark);
+}
+
+
+/* Card Description */
+
+.expertise-card p {
+    margin: 0;
+
+    font-size: 1.25rem;
+    line-height: 1.55;
+
+    color: var(--color-text);
+}
+
+
+/* --------------------------------------------------------------------
+ * ## What I Can Help With
+ * ------------------------------------------------------------------- */
+
+.about-help-box {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 2rem;
+
+    padding: 2.5rem;
+
+    border: 1px solid var(--color-border);
+
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.about-help-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 0 4.5rem;
+
+    width: 4.5rem;
+    height: 4.5rem;
+
+    border: 1px solid var(--color-1);
+
+    font-size: 2rem;
+
+    color: var(--color-1);
+}
+
+.about-help-box h4 {
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+
+    font-size: 1.7rem;
+
+    font-weight: 500;
+
+    color: var(--color-text-dark);
+}
+
+.about-help-box p {
+    margin: 0;
+
+    font-size: 1.25rem;
+    line-height: 1.6;
+
+    color: var(--color-text);
+}
+
+
+/* --------------------------------------------------------------------
+ * ## Tablet
+ * ------------------------------------------------------------------- */
+
+@media screen and (max-width: 1200px) {
+
+    .about-modern-content {
+        padding-right: 3rem;
+    }
+
+    .about-title {
+        font-size: 3.8rem;
+    }
+
+    .expertise-card {
+        padding: 2rem;
+        min-height: 200px;
+    }
+
+}
+
+
+/* --------------------------------------------------------------------
+ * ## Mobile / Tablet
+ * ------------------------------------------------------------------- */
+
+@media screen and (max-width: 1000px) {
+
+    .about-modern-content {
+        padding-right: 0;
+    }
+
+    .about-expertise-modern {
+        padding-left: 0;
+        margin-top: 6rem;
+    }
+
+    .expertise-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-title {
+        max-width: 750px;
+    }
+
+}
+
+
+/* --------------------------------------------------------------------
+ * ## Mobile
+ * ------------------------------------------------------------------- */
+
+@media screen and (max-width: 700px) {
+
+    .about-title {
+        font-size: 3.2rem;
+        line-height: 1.15;
+    }
+
+    .about-modern-content .attention-getter {
+        font-size: 1.6rem;
+    }
+
+    .about-description {
+        font-size: 1.4rem;
+    }
+
+    .about-stats {
+        width: 100%;
+    }
+
+    .about-stat {
+        padding: 0 1.5rem;
+    }
+
+    .about-stat strong {
+        font-size: 3.5rem;
+    }
+
+    .about-stat span {
+        font-size: 1.1rem;
+    }
+
+    .expertise-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .expertise-card {
+        min-height: auto;
+        padding: 2rem;
+    }
+
+    .about-help-box {
+        padding: 2rem;
+
+        gap: 1.5rem;
+    }
+
+}
+
+
+/* --------------------------------------------------------------------
+ * ## Small Mobile
+ * ------------------------------------------------------------------- */
+
+@media screen and (max-width: 500px) {
+
+    .about-title {
+        font-size: 2.8rem;
+    }
+
+    .about-stats {
+        display: grid;
+
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 0;
+    }
+
+    .about-stat {
+        padding: 0 1rem;
+    }
+
+    .about-stat:first-child {
+        padding-left: 0;
+    }
+
+    .about-stat strong {
+        font-size: 2.8rem;
+    }
+
+    .about-stat span {
+        font-size: 1rem;
+    }
+
+    .about-help-box {
+        display: block;
+    }
+
+    .about-help-number {
+        margin-bottom: 1.5rem;
+    }
+
+    .about-cv-btn {
+        max-width: 100%;
+    }
+
+}
